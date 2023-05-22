@@ -1,0 +1,20 @@
+.woocommerce-page .woocommerce-message .button{
+    margin-top:-6px;
+    margin-bottom:-10px;
+}
+.woocommerce-message, .woocommerce-info{
+    background-color:white;
+    border: solid 1px $primary;
+    border-radius:0.375rem;
+}
+.woocommerce-message::before, .woocommerce-info::before{
+    color:$primary;
+}
+.woocommerce .woocommerce-error .button, .woocommerce .woocommerce-info .button, .woocommerce .woocommerce-message .button, .woocommerce-page .woocommerce-error .button, .woocommerce-page .woocommerce-info .button, .woocommerce-page .woocommerce-message .button{
+    background-color:$primary;
+    color:#fff;
+}
+.woocommerce .woocommerce-error .button:hover, .woocommerce .woocommerce-info .button:hover, .woocommerce .woocommerce-message .button:hover, .woocommerce-page .woocommerce-error .button:hover, .woocommerce-page .woocommerce-info .button:hover, .woocommerce-page .woocommerce-message .button:hover{
+    background-color:#000;
+    color:#fff;
+}

@@ -1,0 +1,85 @@
+.carousel-item .carousel-col{
+    height: auto;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+}
+.carousel-flex .carousel-item.active, .carousel-item-next, .carousel-item-prev{
+    display:flex!important;
+
+}
+.carousel-control-prev{
+    margin-left:-5rem;
+    justify-content:flex-start!important;
+}
+.carousel-control-next{
+    margin-right:-5rem;
+    justify-content:flex-end!important;
+}
+.carousel-produkt-subkategorie a{
+    color:black;
+    font-size:16px;
+    font-weight: 500;
+}
+.carousel-produkt-kategorie a{
+    color:white;
+    background-color:$primary;
+    font-size: 12px;
+    margin-right:5px;
+    margin-bottom:5px;
+}
+.carousel-produkt-titel{
+    font-size:16px;
+    font-weight: 400;
+}
+.carousel-produkt-preis{
+    font-size:16px;
+    font-weight: 500;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color:#e6e6e6;
+    border-radius: 75px;
+    padding:2rem;
+    filter:none!important;
+}
+.carousel-col{
+    transform:scale(0.9);
+    transition-duration:.6s;
+    height: 100%;
+}
+.carousel-col:hover{
+    transform:scale(1);
+    transition-duration:.6s;
+}
+.onsale-badge{
+    background-color:$primary;
+    color:white;
+    position: fixed;
+    top:0;
+    margin-top:0rem;
+    transform: rotate(-45deg);
+    margin-left: -40px;
+}
+.outofstock-badge{
+    background-color:black;
+    color:white;
+    position:fixed;
+    top:0;
+    margin-top:1.5rem;
+}
+@include media-breakpoint-down(lg) {
+    .carousel-desktop{
+        display:none;
+    }
+    .carousel-item{
+        margin-bottom:40px;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .carousel-mobile{
+        display:none;
+    }
+}

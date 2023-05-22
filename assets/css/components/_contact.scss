@@ -1,0 +1,33 @@
+.form-check-input:checked{
+    background-color: white;
+    border-color: $primary;
+}
+.form-check-input:focus{
+    box-shadow:none;
+}
+.form-check-label a{
+    color:$primary;
+}
+.kontaktinformationen .bi::before{
+    color:$primary;
+}
+.kontaktformular .form-control{
+    border:1px solid $primary;
+}
+.kontaktformular .form-control:focus{
+    box-shadow: none;
+}
+.ohnohoney{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+}
+.alert-success{
+    background-color:white;
+    border:1px solid $primary;
+    color:$primary;
+}

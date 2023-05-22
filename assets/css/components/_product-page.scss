@@ -1,0 +1,221 @@
+@include media-breakpoint-up(lg) {
+    .custom-product-gallery .custom-product-main-image {
+        flex: 0 0 70%;
+        max-width: 70%;
+        padding: 0 40px;
+    }
+    .custom-product-gallery #custom-product-carousel {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+    .custom-product-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    #custom-product-carousel .carousel-control-prev {
+        position: absolute;
+        top: 0;
+        bottom:auto;
+        left:81%;
+    }
+    #custom-product-carousel .carousel-control-next {
+        position: absolute;
+        bottom: 0;
+        top:auto;
+        left:57%;
+    }
+    #custom-product-carousel .carousel-control-prev-icon, #custom-product-carousel .carousel-control-next-icon{
+        transform: rotate(90deg);
+    }
+    #custom-product-carousel .carousel-item{
+        transition:none;
+    }
+    #custom-product-carousel .carousel-item-prev {
+        transform: translate3d(0, -100%, 0);
+    }
+    #custom-product-carousel .carousel-item-next {
+        transform: translate3d(0, 100%, 0);
+    }
+}
+.wc-gzd-additional-info > a, .faq-link{
+    color:$primary;
+}
+bdi{
+    font-family:"LEMONMILK-Regular", sans-serif!important;
+}
+div.product-categories.fw-semibold > span > a, div.tags.fw-semibold > span > a{
+    color:black;
+}
+.qty{
+    border-radius: 0.375rem;
+    border: 1px solid #ededed;
+    height: 35px;
+}
+.woocommerce div.product form.cart .variations select{
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    border: 1px solid #ededed;
+}
+.woocommerce div.product .product_title{
+    text-transform: uppercase;
+    font-family:"LEMONMILK-Regular", sans-serif!important;
+}
+.woocommerce div.product p.price, .woocommerce div.product span.price{
+    color:#000;
+    font-weight: 500;
+}
+.legal-price-info{
+    font-weight: 300;
+}
+.woocommerce-product-details__short-description{
+    font-weight: 500;
+}
+.custom-product-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.custom-product-thumbs {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.custom-product-thumb {
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+#custom-product-carousel > div > div.carousel-item.active > div > div:not(:nth-child(3)) > a{
+    margin-bottom:25px;
+}
+.custom-product-thumb img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.custom-product-thumb::before {
+content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.custom-product-main-image {
+    flex: 1;
+    text-align: center;
+}
+.custom-product-main-image img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+.custom-product-thumb.is-main-image img {
+    border:1px solid $primary;
+    border-radius: 0.325em;
+}
+.custom-product-thumb.is-main-image::before {
+    content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0);
+}
+.woocommerce div.product div.images img{
+    width: auto;
+    
+}
+.woocommerce div.product div.images{
+    margin-bottom:0px;
+}
+.woocommerce span.onsale{
+    display:none;
+}
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item){
+    border:1px solid $primary;
+    box-shadow: none;
+    -webkit-box-shadow:none;
+}
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item):hover{
+    background-color:$primary;
+    color:white;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected{
+    background-color:$primary!important;
+    color:white!important;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+    border:1px solid $primary;
+}
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected, .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected:hover{
+    box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.wvs-has-image-tooltip:before, [data-wvstooltip]:before{
+    background-color:$primary;
+}
+.wvs-has-image-tooltip:after, [data-wvstooltip]:after{
+    border-top:5px solid $primary;
+}
+@include media-breakpoint-down(lg) {
+    .woocommerce div.product div.summary{
+        margin-bottom:1rem;
+    }
+    .custom-product-gallery {
+        flex-direction: column;
+    }
+    .custom-product-thumbs {
+        margin-right: 0;
+        margin-top: 20px; /* Add margin-top to move the gallery below the main image */
+    }
+    .custom-product-main-image {
+        order: -1; /* Use flexbox order to move the main image above the gallery */
+    }
+    .custom-product-gallery {
+        flex-direction: column;
+    }
+    .custom-product-thumbs {
+        display: flex; /* Add display:flex to make the gallery items next to each other */
+        flex-direction: row; /* Use flexbox row direction to arrange the items horizontally */
+        flex-wrap: wrap; /* Add flex-wrap: wrap to wrap the gallery items to the next line */
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    .custom-product-thumb {
+        margin-bottom: 0;
+        width:100%;
+    }
+    .custom-product-thumb:last-child {
+        margin-right: 0; /* Remove margin-right from the last gallery item */
+    }
+    .custom-product-main-image {
+        order: -1;
+    }
+    div.custom-product-thumbs > a.custom-product-thumb > img{
+        width:100%!important;
+    }
+    .carousel-col{
+        height: auto!important;
+    }
+    .carousel-control-next{
+        margin-right:0;
+    }
+    .carousel-control-prev{
+        margin-left:0;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        padding:0;
+    }
+    #custom-product-carousel .carousel-inner{
+        margin-top:15%
+    }
+}

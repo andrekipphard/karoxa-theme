@@ -1,0 +1,47 @@
+.btn-close{
+    --bs-btn-close-opacity: 1
+}
+.modal-nav-body a{
+    color:#fff;
+    text-decoration:none;
+}
+.navbar-toggle {
+    float: left !important;
+    margin-left: 15px;
+    margin-right: 0;
+  }
+.modal-nav-content {
+    width: 100%;
+    height: auto;
+}
+.modal-nav-body {
+    margin-top: 100px; 
+}
+.modal-nav-body ul {
+    list-style-type: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.modal-nav-body ul li {
+    text-align: center;
+    font-size: 130%;
+    padding: 8px;
+    text-transform: uppercase;
+}
+.modal{
+    background-color:rgba(0,0,0,.7);
+}
+#offcanvas-menu{
+    display:flex;
+    flex-direction: column;
+}
+#offcanvas-menu a{
+    margin-bottom:10px;
+    color:#fff;
+}
+.offcanvas-header .btn-close{
+    font-size: 20px;
+    margin-bottom:-6px;
+}

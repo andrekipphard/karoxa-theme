@@ -1,0 +1,116 @@
+.woocommerce-products-header{
+    height: 60vh;
+}
+.woocommerce-products-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.woocommerce ul.products li.product a img{
+    height: 424px;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+    margin-bottom:1.5em;
+}
+.archive .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
+    margin-bottom:1em;
+}
+.woocommerce nav.woocommerce-pagination ul li{
+    border-right:1px solid $primary;
+}
+.woocommerce nav.woocommerce-pagination ul{
+    border:1px solid $primary;
+    border-right:0;
+}
+.woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current{
+    background:$primary;
+    color:white;
+}
+.archive .wc-block-product-categories-list{
+    list-style: none;
+    padding-left:0;
+}
+.archive h3{
+    font-size:18px;
+}
+.archive .wc-block-product-categories-list-item{
+    opacity: 0.7;
+}
+.archive .wc-block-product-categories-list-item:not(:last-child){
+    margin-bottom:5px;
+}
+.wp-block-woocommerce-filter-wrapper{
+    margin-top:50px;
+}
+.woocommerce-sidebar{
+    position: sticky;
+    top:200px;
+}
+.sidebar-col{
+    position: relative;
+}
+.archive .wc-block-components-checkbox__label{
+    border: 1px solid #ff7bac;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.archive .wc-block-components-checkbox__label:hover, .wc-block-components-checkbox__input:checked + svg + .wc-block-components-checkbox__label{
+    background-color:$primary;
+    color:white;
+}
+.archive .wc-block-components-checkbox .wc-block-components-checkbox__input[type=checkbox], .archive .wc-block-components-checkbox .wc-block-components-checkbox__mark{
+    display:none;
+}
+.archive .editor-styles-wrapper .wc-block-components-checkbox-list li, .archive .wc-block-components-checkbox-list li{
+    display:inline-block;
+    margin-right:20px;
+}
+.archive .wc-block-components-price-slider--is-input-inline .wc-block-components-price-slider__controls .wc-block-components-price-slider__amount{
+    border: 1px solid $primary!important;
+    max-width: 80px;
+}
+.archive .wc-block-components-price-slider__range-input-wrapper, .archive .wc-block-components-price-slider__range-input-progress{
+    height: 1px;
+}
+.archive .wc-block-components-price-slider__range-input-progress{
+    top:1px;
+    --range-color:#fc7bac;
+}
+.archive .wc-block-components-price-slider__range-input-wrapper:before{
+    bottom:-1px;
+    top:1px;
+    background:$primary;
+}
+
+  .wc-block-price-filter__range-input::-webkit-slider-thumb{
+    border:1px solid $primary;
+    background-color: $primary; /* Change this to your desired color */
+  }
+  .wc-block-price-filter__range-input::-moz-range-thumb{
+    border:1px solid $primary;
+    background-color: $primary; /* Change this to your desired color */
+  }
+  .wc-block-price-filter__range-input::-ms-thumb{
+    border:1px solid $primary;
+    background-color: $primary; /* Change this to your desired color */
+  }
+  .mobile-filter{
+    display:none;
+  }
+  @include media-breakpoint-down(lg){
+    .mobile-filter{
+        display:block;
+    }
+    .sidebar-col{
+        display:none;
+    }
+  }

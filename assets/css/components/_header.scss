@@ -1,0 +1,88 @@
+
+.navbar li a{
+    font-family:"LEMONMILK-Regular", sans-serif!important;
+}
+.top-bar-1{
+    border-bottom: solid 5px $primary;
+}
+.top-bar-2 .lemonmilk{
+    font-size: 12px;
+}
+.site-branding img{
+    width:250px;
+    height: auto;
+}
+.toggler-white{
+    fill: #fff;
+}
+.navbar ul{
+    
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    height:32px;
+}
+.navbar li{
+    margin: 0 20px;
+    float:left;
+    position:relative;
+    a{
+        display:block;
+        line-height:30px;
+        text-align:center;
+        text-decoration:none;
+    }
+}
+.header-white .navbar li{
+    a{
+        color:black;
+    }
+    a:hover, a:active{
+        color:$primary;
+    }
+}
+
+.sub-menu{
+    list-style-type:none;
+    display:none;
+    left:0;
+    position: absolute;
+    background-color: $primary;
+    width: 100%;
+    a:hover{
+        color:white!important;
+    }
+    a{
+        font-size: 16px;
+    }
+}
+.navbar li:hover .sub-menu{
+    display:block;
+}
+.navbar-toggler, .navbar-toggler:focus{
+    border:0!important;
+    box-shadow:0 0 0 0!important;
+}
+.navbar-toggler-icon.toggler-white{
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")!important;
+
+}
+.cart-item-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: $primary;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+#header-cart {
+    position: relative;
+}
+@include media-breakpoint-down(lg){
+    .site-branding img{
+        width:120px;
+        height: auto;
+    }
+}

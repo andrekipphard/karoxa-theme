@@ -1,0 +1,19 @@
+.woocommerce ul.products{
+    display:flex;
+    flex-wrap:wrap;
+}
+#categorySelect{
+    width:100%;
+    padding:10px;
+    border:solid 1px $primary;
+    border-radius: 0.375em;
+}
+@include media-breakpoint-down(lg){
+    .nav-tabs {
+        display: none;
+    }
+    #categorySelect {
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
