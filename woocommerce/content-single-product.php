@@ -106,7 +106,7 @@ if ( post_password_required() ) {
                 </div>
             </div>
             Hast du Fragen zum SHAPE BODY?<br>
-            <a href="https://shop.karoxa.ch/faq/" class="faq-link">zu unseren FAQs</a>
+            <a href="/faq/" class="faq-link">zu unseren FAQs</a>
         </div>
         <div class="col-12 col-lg-6">
             <?php the_content();?>

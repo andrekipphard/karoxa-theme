@@ -23,6 +23,7 @@ $link-decoration:none;
 @import "components/background-image-text";
 @import "components/newsletter-popup";
 @import "components/product-archive";
+@import "components/faq";
 @font-face {
     font-family: 'AvenirLTStd-Roman';
     src: url('../fonts/avenir_ff/AvenirLTStd-Roman.otf') format('opentype');
@@ -149,12 +150,21 @@ body{
 #wc_bis_product_form #wc_bis_email, #wc_bis_product_form #wc_bis_send_form{
     margin-right:5px;
 }
+.desktop-hide{
+    display:none;
+}
 @include media-breakpoint-up(lg){
     .products-of-category .woocommerce ul.products li.product a img{
         height: 346px;
     }
 }
 @include media-breakpoint-down(lg){
+    .desktop-hide{
+        display:block;
+    }
+    .mobile-hide{
+        display:none;
+    }
     .row{
         padding-left:10px!important;
         padding-right:10px!important;
@@ -174,5 +184,23 @@ body{
         order: 3;
         margin-top:10px;
         margin-bottom:0px;
+    }
+    .show{
+        display:inline-block;
+    }
+    .sub-menu li{
+        width: 100%;
+    }
+    .wccs-click-for-menu{
+        display:inline;
+        .sub-menu{
+            padding:0;
+            a{
+                margin-left:10px;
+            }
+        }
+    }
+    .wccs-click-for-menu > a:after{
+        display:none!important;
     }
 }

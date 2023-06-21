@@ -94,6 +94,10 @@ get_header();
 				elseif( get_row_layout() == 'products_of_category' ): 
 
 					get_template_part( 'template-parts/layouts/'. get_row_layout() );
+
+				elseif( get_row_layout() == 'faq' ): 
+
+					get_template_part( 'template-parts/layouts/'. get_row_layout() );
 				
 				endif; 
 

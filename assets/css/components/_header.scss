@@ -20,7 +20,6 @@
     margin:0;
     padding:0;
     list-style-type:none;
-    height:32px;
 }
 .navbar li{
     margin: 0 20px;
@@ -56,9 +55,12 @@
         font-size: 16px;
     }
 }
-.navbar li:hover .sub-menu{
-    display:block;
+@include media-breakpoint-up(lg){
+    .navbar li:hover .sub-menu{
+        display:block;
+    }
 }
+
 .navbar-toggler, .navbar-toggler:focus{
     border:0!important;
     box-shadow:0 0 0 0!important;
@@ -80,9 +82,103 @@
 #header-cart {
     position: relative;
 }
+.dropdown-hover:hover > .dropdown-menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  .dropdown-hover > .dropdown-toggle:active {
+    pointer-events: none;
+  }
+  #navbarExampleOnHover > ul > li.nav-item.dropdown.dropdown-hover.position-static > div.dropdown-menu {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  #navbarExampleOnHover .list-group-item.list-group-item-action{
+      border:none;
+      font-family: 'AvenirLTStd-Roman'!important;
+      text-transform:capitalize;
+      
+  }
+  #navbarExampleOnHover .list-group-item.list-group-item-action:hover{
+          background-color:transparent;
+      }
+      #wcc-switcher-style-01{
+        margin-top:0;
+        width:auto!important;
+      }
+      #wcc-switcher-style-01 .wcc-crnt-currency{
+        border: none!important;
+        background-color: transparent!important;
+      }
+      #wcc-switcher-style-01 .wcc-list li{
+        border: none!important;
+      }
+      .wcc-name{
+        display:none;
+      }
+      #wcc-switcher-style-01 .wcc-flag{
+        margin-left:0!important;
+      }
 @include media-breakpoint-down(lg){
     .site-branding img{
         width:120px;
         height: auto;
+    }
+    .navbar ul{
+        position: absolute;
+        width: 100%;
+    left: 0;
+
+    }
+    #navbarExampleOnHover .dropdown-menu a
+    {
+        font-size:0.8rem;
+    }
+    #navbarExampleOnHover .list-group-item.list-group-item-action{
+        font-size:0.8rem;
+    }
+    li.menu-item-has-children > a::after {
+        content: "";
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="%23fff"%3e%3cpath fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" clip-rule="evenodd"/%3e%3c/svg%3e');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+    .offcanvas ul ul{
+        width: auto;
+        position: relative;
+        background-color:transparent;
+        padding:10px;
+    }
+    /* Adjust the position of the sub-menu of the sub-menu */
+    .offcanvas ul ul ul {
+        width: auto;
+        position: relative!important;
+        background-color:transparent;
+        padding:10px;
+        margin-top:0px;
+    }
+    
+    .offcanvas ul ul ul li:last-child{
+        margin-bottom:0px;
+    }
+    .offcanvas-body .main-navigation ul li{
+        margin-bottom:10px;
+    }
+    #offcanvas-menu a{
+        float:left;
+    }
+    .show{
+        display:inline-block;
     }
 }

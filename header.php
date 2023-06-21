@@ -65,19 +65,21 @@
 						?>
 					</div><!-- .site-branding -->
 				</div>
-				<div class="col-2 col-lg-8 d-flex align-items-center justify-content-end">
-					<nav class="navbar navbar-expand-lg text-uppercase fw-light">
+				<div class="col-2 col-lg-8 d-flex align-items-center justify-content-center">
+					
+					<nav class="navbar navbar-expand-lg text-uppercase fw-light position-static">
+						<!-- Container wrapper -->
 						<div class="container-fluid">
 							<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon"></span>
 							</button>
 							<!-- *** Offcanvas *** -->
 							<div class="offcanvas offcanvas-start d-flex d-lg-none bg-black" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-								<div class="row offcanvas-header mt-5 py-5">
-									<div class="col-6 d-flex justify-content-center align-self-center">
+								<div class="row offcanvas-header mt-5" style="margin-left:0px;">
+									<div class="col-6 d-flex align-self-center">
 										<img src="/wp-content/uploads/2023/02/cropped-logo.png" style="width:120px;">
 									</div>
-									<div class="col-6 d-flex justify-content-center align-self-center">
+									<div class="col-6 d-flex align-self-center justify-content-end">
 										<button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close">
 											X
 										</button>
@@ -101,18 +103,67 @@
 								</div>
 							</div>
 							<!-- *** Offcanvas End -->
-							<div class="collapse navbar-collapse" id="navbarNav">
-								<?php
-									wp_nav_menu(
-										array(
-											'theme_location' => 'menu-1',
-											'menu_id'        => 'primary-menu',
-										)
-									);
-								?>
+							<!-- Collapsible wrapper -->
+							<div class="collapse navbar-collapse" id="navbarExampleOnHover">
+								<ul class="navbar-nav me-auto ps-lg-0" style="padding-left: 0.15rem">
+									<?php if ( have_rows( 'menu_item', 'options' ) ) : ?>
+										<?php while ( have_rows( 'menu_item', 'options' ) ) : the_row(); 
+											$menu_item_name = get_sub_field( 'menu_item_name', 'options' );
+											$menu_item_url = get_sub_field( 'menu_item_url', 'options' );?>
+											<?php if ( get_sub_field( 'sub_menu_option', 'options' ) == "Ja" ) : ?>
+												<li class="nav-item dropdown dropdown-hover position-static">
+													<a class="nav-link dropdown-toggle" href="<?= $menu_item_url; ?>" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+														<?= $menu_item_name;?>
+													</a>
+													<!-- Dropdown menu -->
+													<div class="dropdown-menu w-100" aria-labelledby="navbarDropdown" style="border:none">
+														<div class="container">
+															<div class="row my-4">
+																<?php if ( have_rows( 'sub_menu', 'options' ) ) : ?>
+																	<?php while ( have_rows( 'sub_menu', 'options' ) ) : the_row();	
+																		$sub_menu_name = get_sub_field( 'sub_menu_name', 'options' );
+																		$sub_menu_url = get_sub_field( 'sub_menu_url', 'options' );?>
+																		<div class="col-md-6 col-lg-4 mb-3 mb-lg-0 d-flex align-items-center flex-column">
+																			<div class="content-aligned">
+																				<a href="<?= $sub_menu_url;?>" class="text-start"><?= $sub_menu_name;?></a>
+																				<div class="list-group list-group-flush">
+																					<?php if ( have_rows( 'sub_menu_item', 'options' ) ) : ?>
+																						<?php while ( have_rows( 'sub_menu_item', 'options' ) ) : the_row(); 
+																							$sub_menu_item_name = get_sub_field( 'sub_menu_item_name', 'options' );
+																							$sub_menu_item_url = get_sub_field( 'sub_menu_item_url', 'options' );?>
+																							<a href="<?= $sub_menu_item_url;?>" class="list-group-item list-group-item-action text-start ps-0"><?= $sub_menu_item_name;?></a>
+																						<?php endwhile; ?>
+																					<?php endif; ?>
+																				</div>
+																			</div>
+																			
+																		</div>
+																	<?php endwhile; ?>
+																<?php endif; ?>
+															</div>
+														</div>
+													</div>
+												</li>
+											<?php endif; ?>
+											<?php if ( get_sub_field( 'sub_menu_option', 'options' ) == "Nein" ) : ?>
+												<li class="nav-item">
+												<?php
+													if (has_shortcode($menu_item_name, 'wcc_switcher')):?>
+														<?php echo do_shortcode($menu_item_name);?>
+													<?php else :?>
+														<a class="nav-link" href="<?= $menu_item_url; ?>">
+														<?= $menu_item_name;?>
+													</a>
+													<?php endif;
+													?>
+												</li>
+											<?php endif; ?>
+										<?php endwhile;?>
+									<?php endif;?>
+								</ul>
 							</div>
-						</div>
-					</nav>
+						</nav>
+	
 				</div>
 				<div class="col-2 col-lg-1 d-flex align-items-center justify-content-end">
 					<a class="header-cart" href="<?php echo wc_get_cart_url(); ?>" id="header-cart">
@@ -121,7 +172,6 @@
 					</a>
 				</div>
 			</div>
-			
 		</div>
 	</header><!-- #masthead -->
 
@@ -130,3 +180,23 @@
 
 	<!-- Currency Modal -->
 	<?php get_template_part('template-parts/currency-modal'); ?>
+
+<script>
+	jQuery(function($) {
+    $('.offcanvas .menu-item-has-children > a').click(function(e) {
+      var $subMenu = $(this).siblings('.sub-menu');
+      if ($subMenu.length > 0) {
+        if (!$subMenu.hasClass('show')) {
+          e.preventDefault();
+          $subMenu.addClass('show');
+        } else {
+          $subMenu.removeClass('show');
+        }
+      }
+    });
+  });
+  </script>
+
+
+
+
