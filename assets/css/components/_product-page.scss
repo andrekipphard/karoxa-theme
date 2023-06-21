@@ -166,6 +166,19 @@ content: "";
 .wvs-has-image-tooltip:after, [data-wvstooltip]:after{
     border-top:5px solid $primary;
 }
+#groessentabelleModal .modal-content{
+    background-color:$primary;
+    tr:nth-child(1){
+        border-bottom:1px solid white;
+    }
+    td{
+        border-right:1px solid white;
+        text-align: center;
+    }
+    td:last-child{
+        border-right:none;
+    }
+}
 @include media-breakpoint-down(lg) {
     .woocommerce div.product div.summary{
         margin-bottom:1rem;

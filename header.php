@@ -35,20 +35,25 @@
 		<div class="sticky-top w-100">
 
 		
-			<div class="row d-none d-lg-flex bg-dark text-white top-bar-2 pt-3 pb-3 ps-5 pe-5">
-				<div class="col-4 d-flex justify-content-start text-uppercase">
+			<div class="row d-none d-lg-flex bg-dark text-white top-bar-2 pb-3 ps-5 pe-5">
+				<div class="col-3 d-flex justify-content-start text-uppercase">
 					<div class="p lemonmilk">
-						Versandkostenfrei ab CHF 79
+						<i class="bi bi-truck fs-3 me-3"></i>Versandkostenfrei ab CHF 79 / 79€
 					</div>
 				</div>
-				<div class="col-4 d-flex justify-content-center text-uppercase">
+				<div class="col-3 d-flex justify-content-center text-uppercase">
 					<div class="p lemonmilk">
-						Versand innerhalb Schweiz & EU
+						<i class="bi bi-box-seam fs-3 me-3"></i>Versand innerhalb Schweiz 🇨🇭 & EU 🇪🇺
 					</div>
 				</div>
-				<div class="col-4 d-flex justify-content-end text-uppercase">
+				<div class="col-3 d-flex justify-content-end text-uppercase">
 					<div class="p lemonmilk">
-						3-6 Tage Standard-Lieferung
+						<i class="bi bi-credit-card fs-3 me-3"></i>Sichere und einfache Bezahlung
+					</div>
+				</div>
+				<div class="col-3 d-flex justify-content-end text-uppercase">
+					<div class="p lemonmilk">
+						<i class="bi bi-arrow-clockwise fs-3 me-3"></i>14 Tage Rückgaberecht
 					</div>
 				</div>
 			</div>

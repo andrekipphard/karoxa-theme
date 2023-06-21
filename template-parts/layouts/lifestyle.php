@@ -4,7 +4,7 @@ $instagram_profile_image = get_sub_field('instagram_profile_image');
 $instagram_account_name = get_sub_field('instagram_account_name');
 $text = get_sub_field('text');
 ?>
-<div class="bg-light">
+<div class="bg-white">
     <div class="container">
         <div class="row pt-5 pt-lg-5 pe-lg-5 ps-lg-5 lifestyle">
             <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center ps-lg-5 pt-lg-3">

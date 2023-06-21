@@ -64,6 +64,32 @@ if ( post_password_required() ) {
                  */
                 do_action( 'woocommerce_single_product_summary' );
                 ?>
+                <?php if ( have_rows( 'grosentabelle' ) ) : ?>
+                    <!-- Button trigger modal -->
+                    <?php while ( have_rows( 'grosentabelle' ) ) : the_row(); 
+                        $titel = get_sub_field( 'titel' );
+                        $inhalt = get_sub_field( 'inhalt' );?>
+                        <button type="button" class="btn btn-link ps-0" style="text-decoration:underline;" data-bs-toggle="modal" data-bs-target="#groessentabelleModal">
+                            Größentabelle
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="groessentabelleModal" tabindex="-1" aria-labelledby="groessentabelleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="#groessentabelleModalLabel"><?= $titel;?></h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <?= $inhalt;?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+                
+                
             </div>
         </div>
     </div>
@@ -80,49 +106,11 @@ if ( post_password_required() ) {
                 </div>
             </div>
             Hast du Fragen zum SHAPE BODY?<br>
-            <a href="/" class="faq-link">zu unseren FAQs</a>
+            <a href="https://shop.karoxa.ch/faq/" class="faq-link">zu unseren FAQs</a>
         </div>
         <div class="col-12 col-lg-6">
             <?php the_content();?>
-            <div class="product_meta mt-5 mt-lg-0">
-                <?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
-                    <span class="sku_wrapper fw-semibold"><?php esc_html_e( 'SKU:', 'woocommerce' ); ?> <span class="sku fw-normal"><?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></span></span>
-                <?php endif; ?>
-            </div>
-            <?php if(get_the_terms( $product->get_id(), 'product_cat' )):
-                $terms = get_the_terms( $product->get_id(), 'product_cat' );
-                if ( $terms && ! is_wp_error( $terms ) ) :
-                    $cat_links = array();
-                    foreach ( $terms as $term ) {
-                        $cat_links[] = sprintf( '<a href="%s">%s</a>', esc_url( get_term_link( $term->term_id, 'product_cat' ) ), esc_html( $term->name ) );
-                    }
-                    $cat_list = join( ', ', $cat_links );
-                    printf( '<div class="product-categories fw-semibold">Kategorien: <span class="fw-normal">%s</span></div>', $cat_list );
-                endif;
-            endif;
-            ?>
-            <div class="tags fw-semibold">
-            <?php if(get_the_terms( $product->get_id(), 'product_tag' ) ):
-                $tag_count = sizeof( get_the_terms( $product->get_id(), 'product_tag' ) );
-                
-                if ( $tag_count > 0 ) {
-                    echo esc_html_e( 'Tags: ', 'woocommerce' );
-                    echo ' ';
-                    printf('<span class="fw-normal">');
-                    $tag_index = 1;
-                    foreach ( get_the_terms( $product->get_id(), 'product_tag' ) as $key => $term ) {
-                        echo '<a href="' . esc_url( get_term_link( $term->term_id, 'product_tag' ) ) . '">' . esc_html( $term->name ) . '</a>';
-                        if ( $tag_index < $tag_count ) {
-                            echo ', ';
-                        }
-                        $tag_index++;
-                    }
-                    printf('</span>');
-                }
-            endif;
-            ?>
-            </span>
-            </div>
+            
             
         </div>
     </div>
@@ -138,7 +126,6 @@ if ( post_password_required() ) {
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
 </div>
-
 	
 
 

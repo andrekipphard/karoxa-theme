@@ -67,8 +67,10 @@
     background-color:black;
     color:white;
     position:fixed;
-    top:0;
-    margin-top:1.5rem;
+    top:20px;
+    margin-top:0rem;
+    transform: rotate(-45deg);
+    margin-left:-70px;
 }
 @include media-breakpoint-down(lg) {
     .carousel-desktop{

@@ -58,8 +58,9 @@
 							<ul class="footer-icons d-flex justify-content-center">
 								<?php while ( have_rows( 'social_icons', 'options' ) ) : the_row();
 									$icon = get_sub_field('icon');
-									$url = get_sub_field('url');?>
-									<li class="bg-dark rounded-circle social-icon"><a href="<?= $url; ?>" class="stretched-link"><i class="fs-5 bi bi-<?= $icon; ?> text-white"></i></a></li>
+									$url = get_sub_field('url');
+									$background_color = get_sub_field('background_color');?>
+									<li style="background-color:<?=$background_color;?>" class="rounded-circle social-icon"><a href="<?= $url; ?>" class="stretched-link"><i class="fs-5 bi bi-<?= $icon; ?> text-white"></i></a></li>
 								<?php endwhile; ?>
 							</ul>
 						</div>

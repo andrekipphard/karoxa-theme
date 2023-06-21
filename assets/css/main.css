@@ -12076,8 +12076,10 @@ tr.order-total > td > strong > span, .woocommerce-cart .cart-collaterals .amount
   background-color: black;
   color: white;
   position: fixed;
-  top: 0;
-  margin-top: 1.5rem;
+  top: 20px;
+  margin-top: 0rem;
+  transform: rotate(-45deg);
+  margin-left: -70px;
 }
 
 @media (max-width: 991.98px) {
@@ -12575,6 +12577,32 @@ div.col-5.img-container > img {
   z-index: 2; /* set the z-index of the text */
 }
 
+@-webkit-keyframes moveInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.move-in-from-right {
+  -webkit-animation: moveInFromRight 0.5s ease-out;
+          animation: moveInFromRight 0.5s ease-out;
+}
+
 .lifestyle h2, .lifestyle .h2 {
   font-size: 100px;
   font-weight: 300;
@@ -12856,6 +12884,20 @@ div.product-categories.fw-semibold > span > a, div.tags.fw-semibold > span > a {
 
 .wvs-has-image-tooltip:after, [data-wvstooltip]:after {
   border-top: 5px solid #ff7bac;
+}
+
+#groessentabelleModal .modal-content {
+  background-color: #ff7bac;
+}
+#groessentabelleModal .modal-content tr:nth-child(1) {
+  border-bottom: 1px solid white;
+}
+#groessentabelleModal .modal-content td {
+  border-right: 1px solid white;
+  text-align: center;
+}
+#groessentabelleModal .modal-content td:last-child {
+  border-right: none;
 }
 
 @media (max-width: 991.98px) {

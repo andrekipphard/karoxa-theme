@@ -37,8 +37,9 @@ $mood_image = get_sub_field('mood_image');
                         <ul class="footer-icons d-flex justify-content-center	">
                             <?php while(have_rows('social_media')): the_row();
                                     $social_icon = get_sub_field('social_icon');
-                                    $social_icon_url = get_sub_field('social_icon_url');?>
-                            <li class="bg-dark rounded-circle social-icon"><a href="<?=$social_icon_url?>" class="stretched-link"><i class="fs-5 bi bi-<?= $social_icon;?> text-white"></i></a></li>
+                                    $social_icon_url = get_sub_field('social_icon_url');
+                                    $background_color = get_sub_field('background_color');?>
+                            <li style="background-color:<?=$background_color;?>" class="rounded-circle social-icon"><a href="<?=$social_icon_url?>" class="stretched-link"><i class="fs-5 bi bi-<?= $social_icon;?> text-white"></i></a></li>
                             <?php endwhile;?>
                         </ul>
                     </div>
