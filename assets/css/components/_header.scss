@@ -94,6 +94,13 @@
   .dropdown-hover > .dropdown-toggle:active {
     pointer-events: none;
   }
+  .dropdown-indicator{
+    font-size:10px;
+
+  }
+  #navbarDropdown > i::before{
+    vertical-align: 0rem;
+  }
   #navbarExampleOnHover > ul > li.nav-item.dropdown.dropdown-hover.position-static > div.dropdown-menu {
     width: 100%;
     left: 0;

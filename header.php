@@ -112,8 +112,8 @@
 											$menu_item_url = get_sub_field( 'menu_item_url', 'options' );?>
 											<?php if ( get_sub_field( 'sub_menu_option', 'options' ) == "Ja" ) : ?>
 												<li class="nav-item dropdown dropdown-hover position-static">
-													<a class="nav-link dropdown-toggle" href="<?= $menu_item_url; ?>" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-														<?= $menu_item_name;?>
+													<a class="nav-link" href="<?= $menu_item_url; ?>" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+													<?= $menu_item_name;?><i class="bi bi-caret-down-fill ms-2 dropdown-indicator"></i>
 													</a>
 													<!-- Dropdown menu -->
 													<div class="dropdown-menu w-100" aria-labelledby="navbarDropdown" style="border:none">
