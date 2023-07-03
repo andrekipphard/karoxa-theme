@@ -153,12 +153,20 @@ body{
 .desktop-hide{
     display:none;
 }
+.card img{
+    width:20%; 
+    margin-bottom:20px;
+}
 @include media-breakpoint-up(lg){
     .products-of-category .woocommerce ul.products li.product a img{
         height: 346px;
     }
 }
 @include media-breakpoint-down(lg){
+    .card img{
+        width:30%; 
+        margin-bottom:20px;
+    }
     .desktop-hide{
         display:block;
     }

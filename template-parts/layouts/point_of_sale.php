@@ -9,13 +9,13 @@
                 <div class="row pt-0 pt-lg-5">
                     <?php if(have_rows('point_of_sale')):
                         while(have_rows('point_of_sale')): the_row();
-                            $icon = get_sub_field('icon');
+                            $pos_image = get_sub_field('pos_image');
                             $headline = get_sub_field('headline');
                             $text = get_sub_field('text');
                     ?>
                         <div class="col-12 col-lg-4">
-                            <div class="card h-100 border-0 bg-light pt-3 pg-lg-0">
-                                <i class="fs-1 bi bi-<?= $icon; ?> text-primary"></i>
+                            <div class="card h-100 border-0 bg-light pt-3 pg-lg-0 d-flex align-items-center">
+                                <img src="<?= wp_get_attachment_image_url($pos_image, 'large');?>">
                                 <div class="card-header border-0 bg-light d-flex justify-content-center">
                                     <h3 class="card-title"><?= $headline; ?></h3>
                                 </div>
