@@ -6,11 +6,11 @@ $text = get_sub_field('text');
 ?>
 <div class="bg-white">
     <div class="container">
-        <div class="row pt-5 pt-lg-5 pe-lg-5 ps-lg-5 lifestyle">
-            <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center ps-lg-5 pt-lg-3">
+        <div class="row pt-5 pt-lg-5 pe-lg-5 ps-lg-5 lifestyle d-flex">
+            <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center ps-lg-5 pt-lg-3 lifestyle-col-1">
                 <img class="img-fluid" src="<?= wp_get_attachment_image_url($mockup_image, 'large');?>" />
             </div>
-            <div class="col-12 col-lg-8 d-flex justify-content-between flex-column pb-lg-5 pt-lg-5 pe-lg-5">
+            <div class="col-12 col-lg-8 d-flex justify-content-between flex-column pb-lg-5 pt-lg-5 pe-lg-5 lifestyle-col-2">
                 <div class="col ms-lg-5 d-flex justify-content-between flex-column rounded p-lg-4 mt-5 mt-lg-0">
                     <div class="h3 text-center text-lg-start">
                         Weitere Tipps & Inspirationen zu deinem
