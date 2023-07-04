@@ -12089,6 +12089,14 @@ tr.order-total > td > strong > span, .woocommerce-cart .cart-collaterals .amount
   .carousel-item {
     margin-bottom: 40px;
   }
+  .outofstock-badge {
+    margin-left: -55px;
+    font-size: 12px;
+  }
+  .onsale-badge {
+    margin-left: -42px;
+    font-size: 12px;
+  }
 }
 @media (min-width: 992px) {
   .carousel-mobile {
@@ -12459,6 +12467,11 @@ div.col-5.img-container > img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+@media (min-width: 992px) {
+  .site-footer h2, .site-footer .h2 {
+    font-size: 50px;
   }
 }
 .navbar li a {
@@ -13046,6 +13059,9 @@ div.product-categories.fw-semibold > span > a, div.tags.fw-semibold > span > a {
   }
   .carousel-col {
     height: 100% !important;
+  }
+  .carousel-item .carousel-col {
+    height: auto !important;
   }
   .carousel-control-next {
     margin-right: 0;

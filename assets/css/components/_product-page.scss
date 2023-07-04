@@ -219,6 +219,9 @@ content: "";
     .carousel-col{
         height: 100%!important;
     }
+    .carousel-item .carousel-col{
+        height:auto!important;
+    }
     .carousel-control-next{
         margin-right:0;
     }

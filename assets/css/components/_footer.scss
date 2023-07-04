@@ -73,6 +73,7 @@
     margin-top:0px!important;
     margin-bottom:0px!important;
 }
+
 @include media-breakpoint-down(lg){
     #mc_embed_signup .mc-field-group input{
         width:100%!important;
@@ -84,5 +85,10 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+}
+@include media-breakpoint-up(lg){
+    .site-footer h2{
+        font-size:50px;
     }
 }
