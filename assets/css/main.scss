@@ -157,12 +157,20 @@ body{
     width:20%; 
     margin-bottom:20px;
 }
+
+
 @include media-breakpoint-up(lg){
     .products-of-category .woocommerce ul.products li.product a img{
         height: 346px;
     }
 }
 @include media-breakpoint-down(lg){
+    li.product, .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product{
+        width:50%!important;
+    }
+    .woocommerce ul.products li.product a img{
+        height: auto;
+    }
     .card img{
         width:30%; 
         margin-bottom:20px;

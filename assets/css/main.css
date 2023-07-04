@@ -13045,7 +13045,7 @@ div.product-categories.fw-semibold > span > a, div.tags.fw-semibold > span > a {
     width: 100% !important;
   }
   .carousel-col {
-    height: auto !important;
+    height: 100% !important;
   }
   .carousel-control-next {
     margin-right: 0;
@@ -13464,6 +13464,12 @@ body {
   }
 }
 @media (max-width: 991.98px) {
+  li.product, .woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+    width: 50% !important;
+  }
+  .woocommerce ul.products li.product a img {
+    height: auto;
+  }
   .card img {
     width: 30%;
     margin-bottom: 20px;
