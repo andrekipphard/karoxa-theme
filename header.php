@@ -116,7 +116,7 @@
 													<?= $menu_item_name;?><i class="bi bi-caret-down-fill ms-2 dropdown-indicator"></i>
 													</a>
 													<!-- Dropdown menu -->
-													<div class="dropdown-menu w-100" aria-labelledby="navbarDropdown" style="border:none">
+													<div class="dropdown-menu w-100 fade-in" aria-labelledby="navbarDropdown" style="border:none">
 														<div class="container">
 															<div class="row my-4">
 																<?php if ( have_rows( 'sub_menu', 'options' ) ) : ?>

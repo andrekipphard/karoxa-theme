@@ -12474,6 +12474,33 @@ div.col-5.img-container > img {
     font-size: 50px;
   }
 }
+.dropdown-menu {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-in {
+  -webkit-animation: fade-in-animation 0.5s ease forwards;
+          animation: fade-in-animation 0.5s ease forwards;
+}
+
+@-webkit-keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .navbar li a {
   font-family: "LEMONMILK-Regular", sans-serif !important;
 }
