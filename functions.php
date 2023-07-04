@@ -447,8 +447,11 @@ function custom_product_thumbnails_slider() {
         
         // Display the main image
         echo '<div class="custom-product-main-image">';
-        echo '<img src="'.wp_get_attachment_image_url( $product->get_image_id(), 'large' ).'" alt="'.$product->get_title().'">';
-        echo '</div>';
+		echo '<a class="lightbox" href="'.wp_get_attachment_image_url( $product->get_image_id(), 'large' ).'" alt="'.$product->get_title().'">';
+		echo '<img src="'.wp_get_attachment_image_url( $product->get_image_id(), 'large' ).'" alt="'.$product->get_title().'">';
+		echo '</a>';
+		echo '</div>';
+
 
         echo '</div>';
     }
@@ -466,10 +469,44 @@ function custom_product_thumbnails_script() {
 				e.preventDefault();
 				var imageUrl = $(this).data('image');
 				$('.custom-product-main-image img').attr('src', imageUrl);
+				$('.custom-product-main-image a').attr('href', imageUrl);
 				$('.custom-product-thumb').removeClass('is-main-image');
 				$(this).addClass('is-main-image');
 			});
+			$('#custom-product-carousel .custom-product-thumb').on('click', function(e) {
+        e.preventDefault();
+        var imageUrl = $(this).data('image');
+        $('.custom-product-main-image img').attr('src', imageUrl);
+        $('.custom-product-thumb').removeClass('is-main-image');
+        $(this).addClass('is-main-image');
+    });
+    $('.lightbox').on('click', function(e) {
+        e.preventDefault();
+        var imageUrl = $(this).attr('href');
+
+        // Create a lightbox popup
+        var lightboxHtml = '<div class="custom-product-lightbox">';
+        lightboxHtml += '<span class="custom-product-lightbox-close">&times;</span>';
+        lightboxHtml += '<img src="' + imageUrl + '" alt="">';
+        lightboxHtml += '</div>';
+
+        // Append the lightbox to the body
+        $('body').append(lightboxHtml);
+
+        // Close the lightbox when clicked outside the image
+        $('.custom-product-lightbox').on('click', function(e) {
+            if (e.target === this) {
+                $(this).remove();
+            }
+        });
+
+        // Close the lightbox when the close button is clicked
+        $('.custom-product-lightbox-close').on('click', function() {
+            $('.custom-product-lightbox').remove();
+        });
+            });
 		});
+
     </script>
     <?php
 }
