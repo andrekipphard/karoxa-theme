@@ -16,7 +16,7 @@
 			<div class="row py-4 py-lg-5 d-flex justify-content-center">
 				<div class="col pt-4 pt-lg-5 text-center">
 					<div class="h2 text-center mb-3 mb-lg-5">
-						ERHALTE EINEN 20% RABATTCODE
+						ERHALTE EINEN 10% RABATTCODE
 					</div>
 					<div class="row">
 						<div class="col-12 col-lg-6 pb-3 pb-lg-0">

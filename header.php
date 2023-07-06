@@ -74,21 +74,20 @@
 								<span class="navbar-toggler-icon"></span>
 							</button>
 							<!-- *** Offcanvas *** -->
-							<div class="offcanvas offcanvas-start d-flex d-lg-none bg-black" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+							<div class="offcanvas offcanvas-start d-flex d-lg-none" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
 								<div class="row offcanvas-header mt-5" style="margin-left:0px;">
 									<div class="col-6 d-flex align-self-center">
 										<img src="/wp-content/uploads/2023/02/cropped-logo.png" style="width:120px;">
 									</div>
 									<div class="col-6 d-flex align-self-center justify-content-end">
 										<button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close">
-											X
 										</button>
 									</div>	
 								</div>
 								<div class="row offcanvas-body">
-									<div class="col-12 d-flex justify-content-center align-self- ps-0">
-										<nav class="navbar-header text-white">
-											<div class="navbar-nav text-white text-center">
+									<div class="col-12 d-flex ps-0">
+										<nav class="navbar-header">
+											<div class="navbar-nav text-center">
 												<?php
 														wp_nav_menu(
 															array(
@@ -99,6 +98,10 @@
 													?>
 											</div>
 										</nav>
+									</div>
+									<div class="col-12">
+										<?php $mobile_menu_image = get_field( 'mobile_menu_image', 'options' );?>
+										<img class="" src="<?= wp_get_attachment_image_url($mobile_menu_image, 'medium');?>"/>
 									</div>
 								</div>
 							</div>

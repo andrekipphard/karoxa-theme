@@ -1,3 +1,6 @@
+.woocommerce div.product .in-stock{
+    display:none;
+}
 @include media-breakpoint-up(lg) {
     .custom-product-gallery .custom-product-main-image {
         flex: 0 0 70%;
