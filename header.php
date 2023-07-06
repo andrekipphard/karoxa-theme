@@ -58,14 +58,14 @@
 				</div>
 			</div>
 			<div class="row header-white bg-white top-bar-1 pt-4 pb-4 ps-5 pe-5">
-				<div class="col-8 col-lg-3 d-flex align-items-center">
+				<div class="col-6 header-col-2 col-lg-3 d-flex align-items-center">
 					<div class="site-branding ">
 						<?php
 							the_custom_logo();
 						?>
 					</div><!-- .site-branding -->
 				</div>
-				<div class="col-2 col-lg-8 d-flex align-items-center justify-content-center">
+				<div class="col-2 header-col-1 col-lg-6 d-flex align-items-center justify-content-center">
 					
 					<nav class="navbar navbar-expand-lg text-uppercase fw-light position-static">
 						<!-- Container wrapper -->
@@ -165,7 +165,9 @@
 						</nav>
 	
 				</div>
-				<div class="col-2 col-lg-1 d-flex align-items-center justify-content-end">
+				<div class="col-4 header-col-3 col-lg-3 d-flex align-items-center justify-content-end">
+					<a href="#" data-bs-toggle="modal" data-bs-target="#productSearchModal"><i class="bi bi-search fs-3 me-4 me-lg-5"></i></a>
+					<?php get_template_part('template-parts/product-search-modal'); ?>
 					<a class="header-cart" href="<?php echo wc_get_cart_url(); ?>" id="header-cart">
 						<img src="/wp-content/uploads/2023/02/shopping-bag-black.png" alt="Cart" width="30px" height="30px">
 						<span class="cart-item-count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
