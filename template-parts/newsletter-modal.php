@@ -10,7 +10,7 @@
 					<div class="row">
 						<div class="col">
 							<div class="h2 text-center">
-								ERHALTE EINEN 20% RABATTCODE
+								ERHALTE EINEN 10% RABATTCODE
 							</div>
 							<div class="row">
 								<div class="col-12 col-lg-6">

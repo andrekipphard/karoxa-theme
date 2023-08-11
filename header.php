@@ -57,15 +57,51 @@
 					</div>
 				</div>
 			</div>
+			<div class="row d-flex d-lg-none bg-dark text-white top-bar-2 pb-3 ps-5 pe-5">
+				<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item mb-0 active">
+							<div class="d-flex justify-content-center">
+								<div class="p lemonmilk">
+									<i class="bi bi-truck fs-3 me-3"></i>Versandkostenfrei ab CHF 79 / 79€
+								</div>
+							</div>
+							
+						</div>
+						<div class="carousel-item mb-0">
+							<div class="d-flex justify-content-center">
+								<div class="p lemonmilk">
+									<i class="bi bi-box-seam fs-3 me-3"></i>Versand innerhalb Schweiz 🇨🇭 & EU 🇪🇺
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item mb-0">
+							<div class="d-flex justify-content-center">
+								<div class="p lemonmilk">
+									<i class="bi bi-credit-card fs-3 me-3"></i>Sichere und einfache Bezahlung
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item mb-0">
+							<div class="d-flex justify-content-center">
+								<div class="p lemonmilk">
+									<i class="bi bi-arrow-clockwise fs-3 me-3"></i>14 Tage Rückgaberecht
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
 			<div class="row header-white bg-white top-bar-1 pt-4 pb-4 ps-5 pe-5">
-				<div class="col-6 header-col-2 col-lg-3 d-flex align-items-center">
+				<div class="col-6 header-col-2 col-lg-2 d-flex align-items-center">
 					<div class="site-branding ">
 						<?php
 							the_custom_logo();
 						?>
 					</div><!-- .site-branding -->
 				</div>
-				<div class="col-2 header-col-1 col-lg-6 d-flex align-items-center justify-content-center">
+				<div class="col-2 header-col-1 col-lg-8 d-flex align-items-center justify-content-center">
 					
 					<nav class="navbar navbar-expand-lg text-uppercase fw-light position-static">
 						<!-- Container wrapper -->
@@ -168,7 +204,7 @@
 						</nav>
 	
 				</div>
-				<div class="col-4 header-col-3 col-lg-3 d-flex align-items-center justify-content-end">
+				<div class="col-4 header-col-3 col-lg-2 d-flex align-items-center justify-content-end">
 					<a href="#" data-bs-toggle="modal" data-bs-target="#productSearchModal"><i class="bi bi-search fs-3 me-4 me-lg-5"></i></a>
 					<?php get_template_part('template-parts/product-search-modal'); ?>
 					<a class="header-cart" href="<?php echo wc_get_cart_url(); ?>" id="header-cart">
@@ -201,7 +237,6 @@
     });
   });
   </script>
-
 
 
 
