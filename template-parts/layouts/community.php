@@ -34,7 +34,7 @@ $mood_image = get_sub_field('mood_image');
                     
                     <?php if ( have_rows( 'bewertungen' ) ) : ?>
                         <div class="px-3 px-lg-5">
-                            <div id="testimonial" class="carousel slide py-5">
+                            <div id="testimonial" class="carousel slide py-3 py-lg-5">
                                 <div class="carousel-inner">
                                     <?php while ( have_rows( 'bewertungen' ) ) : the_row(); 
                                         $bewertung_text = get_sub_field('bewertung_text');

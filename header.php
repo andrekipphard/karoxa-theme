@@ -57,7 +57,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row d-flex d-lg-none bg-dark text-white top-bar-2 ps-5 pe-5">
+			<div class="row d-flex d-lg-none bg-dark text-white top-bar-2 pb-2 ps-5 pe-5">
 				<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item mb-0 active">
