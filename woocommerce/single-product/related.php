@@ -39,7 +39,7 @@ if ( $related_products ) : ?>
                         $product_cats = get_categories($product_id);
                         $product_subcats = get_product_subcategories($product_id);
                     ?>
-                    <div class="col-12 col-lg-3 carousel-col rounded shadow p-4">
+                    <div class="col-6 col-lg-3 carousel-col rounded p-4">
                         <a href="<?=$product_permalink?>"><img class="img-fluid mb-2" src="<?php echo wp_get_attachment_url( $related_product->get_image_id(), 'large' ); ?>" /></a>
                         <?php 
                             if ( ! $related_product->is_in_stock() ) {

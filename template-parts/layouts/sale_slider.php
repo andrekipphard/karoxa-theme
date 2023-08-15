@@ -71,7 +71,7 @@
                                         $product_subcats = get_product_subcategories($product_id);    
                                 ?>
 
-                                        <div class="col-12 col-lg-3 carousel-col rounded shadow p-4">
+                                        <div class="col-6 col-lg-3 carousel-col rounded p-4">
                                             <a href="<?=$product_permalink?>"><img class="img-fluid mb-2" src="<?php echo wp_get_attachment_url( $products[$index]->get_image_id(), 'large' ); ?>" /></a>
                                             <?php 
                                                 if ( ! $products[$index]->is_in_stock() ) {
@@ -120,7 +120,7 @@
                                         $product_currency = get_woocommerce_currency();
                                         $product_subcats = get_product_subcategories($product_id);  
                                     ?>
-                                        <div class="col-12 col-lg-3 carousel-col rounded shadow p-4">
+                                        <div class="col-6 col-lg-3 carousel-col rounded p-4">
                                             <a href="<?=$product_permalink?>"><img class="img-fluid mb-2" src="<?php echo wp_get_attachment_url( $products[$index]->get_image_id(), 'large' ); ?>" /></a>
                                             <?php 
                                                 if ( ! $products[$index]->is_in_stock() ) {
@@ -191,7 +191,7 @@
                                         $product_subcats = get_product_subcategories($product_id);    
                                 ?>
 
-                                        <div class="col-6 col-lg-3 carousel-col rounded shadow p-4">
+                                        <div class="col-6 col-lg-3 carousel-col rounded p-4">
                                             <a href="<?=$product_permalink?>"><img class="img-fluid mb-2" src="<?php echo wp_get_attachment_url( $products[$index]->get_image_id(), 'large' ); ?>" /></a>
                                             <?php 
                                                 if ( ! $products[$index]->is_in_stock() ) {
@@ -238,7 +238,7 @@
                                         $product_currency = get_woocommerce_currency();
                                         $product_subcats = get_product_subcategories($product_id);  
                                     ?>
-                                        <div class="col-6 col-lg-3 carousel-col rounded shadow p-4">
+                                        <div class="col-6 col-lg-3 carousel-col rounded p-4">
                                             <a href="<?=$product_permalink?>"><img class="img-fluid mb-2" src="<?php echo wp_get_attachment_url( $products[$index]->get_image_id(), 'large' ); ?>" /></a>
                                             <?php 
                                                 if ( ! $products[$index]->is_in_stock() ) {

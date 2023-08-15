@@ -28,7 +28,7 @@
 							<div class="p text-uppercase fw-semibold d-flex justify-content-center pb-3 lemonmilk">
 								Newsletter abonnieren
 							</div>
-							<p class="text-center">Nach deiner Anmeldung erhältst du einen einmaligen Gutschein im Wert von 20% für unseren Shop.</p>
+							<p class="text-center">Nach deiner Anmeldung erhältst du einen einmaligen Gutschein im Wert von 10% für unseren Shop.</p>
 							
 							<!-- Begin Mailchimp Signup Form -->
 							<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">

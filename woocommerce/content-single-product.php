@@ -105,7 +105,7 @@ if ( post_password_required() ) {
                     Einfache Rückgabe
                 </div>
             </div>
-            Hast du Fragen zum SHAPE BODY?<br>
+            Hast du Fragen zur SHAPEWEAR?<br>
             <a href="/faq/" class="faq-link">zu unseren FAQs</a>
         </div>
         <div class="col-12 col-lg-6">
