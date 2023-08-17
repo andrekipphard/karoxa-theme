@@ -23,7 +23,7 @@ $button_url = get_sub_field('button_url');
                 </div>
             </div>
             <div class="col-12 col-lg-5 img-container d-flex justify-content-center align-items-center">
-                <img class="img-fluid" src="<?= wp_get_attachment_image_url($image, 'large');?>"/>
+                <img class="img-fluid rounded" src="<?= wp_get_attachment_image_url($image, 'large');?>"/>
             </div>
         </div>
     </div>

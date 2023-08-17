@@ -81,11 +81,12 @@ $link-decoration:none;
 ins{
     text-decoration: none;
 }
-.btn{
+.btn, .cmplz-cookiebanner .cmplz-buttons .cmplz-btn{
     font-family: "LEMONMILK-Medium";
     padding-right:45px;
     padding-left:45px;
     font-size: 14px !important;
+
 }
 b{
     text-shadow:0 0 black;

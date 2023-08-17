@@ -5,7 +5,7 @@ $instagram_account_name = get_sub_field('instagram_account_name');
 $text = get_sub_field('text');
 ?>
 <div class="bg-white">
-    <div class="container">
+    <div class="container pt-5">
         <div class="row pt-5 pt-lg-5 pe-lg-5 ps-lg-5 lifestyle d-flex">
             <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center ps-lg-5 pt-lg-3 lifestyle-col-1">
                 <img class="img-fluid" src="<?= wp_get_attachment_image_url($mockup_image, 'large');?>" />
@@ -20,11 +20,11 @@ $text = get_sub_field('text');
                     </div>
                     <div class="row d-flex justify-content-between align-items-center">
                         <div class="col-2 col-lg-1">
-                            <a href="https://www.instagram.com/<?=$instagram_account_name?>/"><img class="img-fluid rounded-circle border border-dark" src="<?= wp_get_attachment_image_url($instagram_profile_image, 'large');?>"/></a>
+                            <a target="_blank" href="https://www.instagram.com/<?=$instagram_account_name?>/"><img class="img-fluid rounded-circle border border-dark" src="<?= wp_get_attachment_image_url($instagram_profile_image, 'large');?>"/></a>
                         </div>
                         <div class="col-5 col-lg-3">
                             <div class="h4 mb-0">
-                                <a href="https://www.instagram.com/<?=$instagram_account_name?>/" class="text-dark"><?=$instagram_account_name;?></a>
+                                <a target="_blank" href="https://www.instagram.com/<?=$instagram_account_name?>/" class="text-dark"><?=$instagram_account_name;?></a>
                             </div>
                         </div>
                         <div class="col-5 col-lg-8 mt-3 mt-lg-0">
@@ -33,7 +33,7 @@ $text = get_sub_field('text');
                                 <?php while(have_rows('social_media')): the_row();
                                         $social_icon = get_sub_field('social_icon');
                                         $social_icon_url = get_sub_field('social_icon_url');?>
-                                <li class=""><a href="<?=$social_icon_url;?>" class=""><i class="fs-1 fs-lg-5 bi bi-<?=$social_icon;?> text-dark fs-2 me-3"></i></a></li>
+                                <li class=""><a target="_blank" href="<?=$social_icon_url;?>" class=""><i class="fs-1 fs-lg-5 bi bi-<?=$social_icon;?> text-dark fs-2 me-3"></i></a></li>
                                 <?php endwhile;?>
                             </ul>
                             <?php endif;?>

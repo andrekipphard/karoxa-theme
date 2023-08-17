@@ -10,10 +10,10 @@ $button_url = get_sub_field('button_url');
     <div class="container">
         <div class="row bg-light p-0 py-3 p-lg-5">
             <div class="col-12 col-lg-5 img-container d-flex justify-content-center align-items-center">
-                <img class="img-fluid" src="<?= wp_get_attachment_image_url($image, 'large');?>"/>
+                <img class="img-fluid rounded" src="<?= wp_get_attachment_image_url($image, 'large');?>"/>
             </div>
             <div class="col-12 col-lg-7 d-flex justify-content-between flex-column">
-                <div class="pt-5 px-lg-5">
+                <div class="pt-5 pt-lg-0 px-lg-5">
                     <div class="h2 mb-3 mb-lg-3 text-uppercase lemonmilk">
                         <?= $headline ?>
                     </div>

@@ -7,7 +7,7 @@ $mood_image = get_sub_field('mood_image');
     <div class="container">
         <div class="row bg-light community pb-4 py-lg-5">
             <div class="col-12 col-lg-5 img-container">
-                <img class="img-fluid" src="<?= wp_get_attachment_image_url($mood_image, 'large');?>" height="100%" />
+                <img class="img-fluid rounded" src="<?= wp_get_attachment_image_url($mood_image, 'large');?>" height="100%" />
             </div>
             <div class="col-12 col-lg-7 d-flex flex-column justify-content-center pb-3 pb-lg-0">
                 <div class="col-12 ms-0 ms-lg-5 d-flex justify-content-between flex-column text-center rounded-lg-lg" style="background-color:#d9d9d9">
@@ -68,7 +68,7 @@ $mood_image = get_sub_field('mood_image');
                                     $social_icon = get_sub_field('social_icon');
                                     $social_icon_url = get_sub_field('social_icon_url');
                                     $background_color = get_sub_field('background_color');?>
-                            <li style="background-color:<?=$background_color;?>" class="rounded-circle social-icon"><a href="<?=$social_icon_url?>" class="stretched-link"><i class="fs-5 bi bi-<?= $social_icon;?> text-white"></i></a></li>
+                            <li style="background-color:<?=$background_color;?>" class="rounded-circle social-icon"><a href="<?=$social_icon_url?>" class="stretched-link" target="_blank"><i class="fs-5 bi bi-<?= $social_icon;?> text-white"></i></a></li>
                             <?php endwhile;?>
                         </ul>
                     </div>

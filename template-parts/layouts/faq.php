@@ -9,7 +9,7 @@
                         $text = get_sub_field( 'text' );?>
                         <div class="accordion-item mb-3">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo get_row_index();?>" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo get_row_index();?>" aria-expanded="false" aria-controls="flush-collapseOne">
                                     <?= $headline; ?>
                                 </button>
                             </h2>

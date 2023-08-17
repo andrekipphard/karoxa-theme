@@ -60,7 +60,7 @@
 									$icon = get_sub_field('icon');
 									$url = get_sub_field('url');
 									$background_color = get_sub_field('background_color');?>
-									<li style="background-color:<?=$background_color;?>" class="rounded-circle social-icon"><a href="<?= $url; ?>" class="stretched-link"><i class="fs-5 bi bi-<?= $icon; ?> text-white"></i></a></li>
+									<li style="background-color:<?=$background_color;?>" class="rounded-circle social-icon"><a href="<?= $url; ?>" class="stretched-link" target="_blank"><i class="fs-5 bi bi-<?= $icon; ?> text-white"></i></a></li>
 								<?php endwhile; ?>
 							</ul>
 						</div>

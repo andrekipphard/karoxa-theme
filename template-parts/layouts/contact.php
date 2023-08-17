@@ -16,13 +16,14 @@
                     while(have_rows('kontaktinformationen')): the_row();
                         $icon = get_sub_field('icon');
                         $kontaktinformation = get_sub_field('kontaktinformation');
+                        $url = get_sub_field('url');
                 ?>
                 <div class="row">
                     <div class="col-1">
                         <i class="bi text-primary bi-<?= $icon; ?>"></i>
                     </div>
                     <div class="col-11">
-                        <?= $kontaktinformation; ?>
+                        <?php if($url):?><a href="<?= $url;?>"><?php endif;?><?= $kontaktinformation; ?><?php if($url):?></a><?php endif;?>
                     </div>
                 </div>
                 <?php endwhile;?>
