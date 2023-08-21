@@ -67,25 +67,28 @@ if ( post_password_required() ) {
                 <?php if ( have_rows( 'grosentabelle' ) ) : ?>
                     <!-- Button trigger modal -->
                     <?php while ( have_rows( 'grosentabelle' ) ) : the_row(); 
+                        $hat_grosentabelle = get_sub_field('hat_grosentabelle');
                         $titel = get_sub_field( 'titel' );
                         $inhalt = get_sub_field( 'inhalt' );?>
-                        <button type="button" class="btn btn-link ps-0" style="text-decoration:underline;" data-bs-toggle="modal" data-bs-target="#groessentabelleModal">
-                            Größentabelle
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="groessentabelleModal" tabindex="-1" aria-labelledby="groessentabelleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="#groessentabelleModalLabel"><?= $titel;?></h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <?= $inhalt;?>
+                        <?php if($hat_grosentabelle == 'Ja'):?>
+                            <button type="button" class="btn btn-link ps-0" style="text-decoration:underline;" data-bs-toggle="modal" data-bs-target="#groessentabelleModal">
+                                Größentabelle
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="groessentabelleModal" tabindex="-1" aria-labelledby="groessentabelleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="#groessentabelleModalLabel"><?= $titel;?></h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <?= $inhalt;?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php endif;?>
                     <?php endwhile; ?>
                 <?php endif; ?>
                 

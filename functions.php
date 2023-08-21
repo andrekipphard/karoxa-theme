@@ -644,3 +644,9 @@ function form_submit_action() {
 	  return ob_get_contents();
 	  ob_get_clean();
 	}
+	add_filter( 'gettext', function( $translated_text ) {
+		if ( 'Enter your email' === $translated_text ) {
+			$translated_text = 'E-Mail eingeben';
+		}
+		return $translated_text;
+	} );

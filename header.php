@@ -113,7 +113,7 @@
 							<div class="offcanvas offcanvas-start d-flex d-lg-none" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
 								<div class="row offcanvas-header mt-5" style="margin-left:0px;">
 									<div class="col-6 d-flex align-self-center">
-										<img src="/wp-content/uploads/2023/02/cropped-logo.png" style="width:120px;">
+										<a href="/"><img src="/wp-content/uploads/2023/02/cropped-logo.png" style="width:120px;"></a>
 									</div>
 									<div class="col-6 d-flex align-self-center justify-content-end">
 										<button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -162,7 +162,7 @@
 																	<?php while ( have_rows( 'sub_menu', 'options' ) ) : the_row();	
 																		$sub_menu_name = get_sub_field( 'sub_menu_name', 'options' );
 																		$sub_menu_url = get_sub_field( 'sub_menu_url', 'options' );?>
-																		<div class="col-md-6 col-lg-4 mb-3 mb-lg-0 d-flex align-items-center flex-column">
+																		<div class="col-md-6 col-lg-3 mb-3 mb-lg-0 d-flex align-items-center flex-column">
 																			<div class="content-aligned">
 																				<a href="<?= $sub_menu_url;?>" class="text-start"><?= $sub_menu_name;?></a>
 																				<div class="list-group list-group-flush">
